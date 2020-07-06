@@ -1,6 +1,6 @@
 let { Worker,isMainThread,parentPort, workerData } = require('worker_threads');//node新增的线程模块，用于创建新线程
-let Lock = require('./tools/lock').Lock;//自写的锁的工具类
-let WorkerPool = require('./tools/pool').WorkerPool;//自写的锁的工具类
+let Lock = require('./tools/lock').Lock;//线程锁工具类
+let WorkerPool = require('./tools/pool').WorkerPool;//线程池工具类
 const path = require('path');
 
 /*
