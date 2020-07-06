@@ -61,7 +61,8 @@ function pool_use(){
     返回值：当Promise.all数组中所有promise都reolve之后，在then中返回结果数组，如果抛出错误，只会返回报错的那一个
     */
 
-    //4个线程，10个任务
+    //4个线程，10个任务,这里注意用map，返回Promise数组，
+    //forEach没有返回值，只是操作每个item不能用
     let list = items.map(
         //async默认返回promise,这里等于生成10个Promise
         async (item, i) => {

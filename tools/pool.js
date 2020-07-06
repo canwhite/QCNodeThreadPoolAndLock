@@ -138,20 +138,3 @@ class WorkerPool {
 
 exports.WorkerPool = WorkerPool;
 
-
-
-
-/*
-用forEach会报错，forEach返回的是一个个的值
-错误原因是，promise.all的参数应该是数组，而不是一个个的值
-
-items.forEach(
-    //async默认返回promise，会给上边新建的空数组填充，promise元素
-    async (item, i,list) => {
-        list[i] = await pool.run(i);
-        console.log(`任务${i}完成了:`,list[i]);//单个输出了，那就没必要在下边all整个输出了
-        //如果不返回res,则最终结果是undefined
-        //PS：map()对每一个元素操作return，并返回一个新数组，需要有返回值。
-    }
-))
-*/
