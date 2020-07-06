@@ -1,12 +1,8 @@
 const path = require('path');
 const { Worker } = require('worker_threads');
 
-//跑起来
-//node --experimental-worker 01-worker_pool.js
 
-/*
-线程池的封装
-*/
+//线程池的封装
 class WorkerPool {
     //构造函数
     constructor(workerPath, numOfThreads) {
@@ -63,7 +59,7 @@ class WorkerPool {
         }
         return -1;
     }
-    //============对外运行函数，接收外界传过来的参数================
+    //============对外运行函数，接收外界传过来的参数=========
     run(getData) {
         //返回Promise，因为使用的时候await等待着Promise返回值
         return new Promise((resolve, reject) => {

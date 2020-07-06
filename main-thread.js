@@ -101,7 +101,10 @@ if(isMainThread){
 
 
 
+
+
 /*
+//PS：补充
 
 const promise1 = Promise.resolve(3);
 const promise2 = 42;
